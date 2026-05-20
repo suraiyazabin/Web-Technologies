@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Manipulation</title>
+    <style>
+        #textBlock {
+            width: 400px;
+            padding: 15px;
+            border: 2px solid black;
+            margin: 20px auto;
+            font-size: 16px;
+            background-color: white;
+            text-align: left;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="textBlock">This is a sample paragraph. You can change its style dynamically using the buttons below.</p>
+
+    <div style="text-align:center;">
+        <button onclick="changeBgColor()">Change Background Color</button>
+        <button onclick="increaseFontSize()">Increase Font Size</button>
+        <button onclick="centerText()">Center Text</button>
+        <button onclick="resetStyle()">Reset Style</button>
+    </div>
+
+    <script>
+        let text = document.getElementById("textBlock");
+        let defaultFontSize = 16; // px
+
+        function changeBgColor() {
+            text.style.backgroundColor = text.style.backgroundColor === "yellow" ? "lightgreen" : "yellow";
+        }
+
+        function increaseFontSize() {
+            let currentSize = window.getComputedStyle(text).fontSize;
+            let newSize = parseInt(currentSize) + 2; // increase 2px each time
+            text.style.fontSize = newSize + "px";
+        }
+
+        function centerText() {
+            text.style.textAlign = "center";
+        }
+
+        function resetStyle() {
+            text.style.backgroundColor = "white";
+            text.style.fontSize = defaultFontSize + "px";
+            text.style.textAlign = "left";
+        }
+    </script>
+
+</body>
+</html>

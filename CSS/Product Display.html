@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Display</title>
+
+    <style>
+
+        /* Page Styling */
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        /* Product Box */
+        .product {
+            display: inline-block;      /* side by side */
+            width: 200px;
+            margin: 15px;               /* space between boxes */
+            padding: 15px;              /* space inside */
+            border: 2px solid black;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        /* Image */
+        .product img {
+            width: 100px;
+        }
+
+        /* Hover Outline */
+        .product:hover {
+            outline: 3px solid blue;
+            outline-offset: 5px;
+        }
+
+        /* Link Styling */
+        .product a {
+            text-decoration: none;
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Product 1 -->
+    <div class="product">
+        <img src="laptop.png" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>High performance laptop with 16GB RAM.</p>
+        <p><strong>$800</strong></p>
+        <a href="#">Buy Now</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+        <img src="headphone.jpg" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>Wireless headphones with noise cancellation.</p>
+        <p><strong>$150</strong></p>
+        <a href="#">Buy Now</a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+        <img src="smartwatch.jpg" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <p>Track fitness and notifications easily.</p>
+        <p><strong>$200</strong></p>
+        <a href="#">Buy Now</a>
+    </div>
+
+</body>
+</html>

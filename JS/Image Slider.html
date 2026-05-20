@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slider</title>
+</head>
+
+<body>
+
+    <h2>Travel Image Slider</h2>
+
+    <!-- Image -->
+    <img id="slider" src="profile.png" width="300"><br><br>
+
+    <!-- Buttons -->
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
+    <script>
+
+        // Array of images
+        let images = ["profile.png", "boy.jpg", "boy2.png"];
+
+        let index = 0;
+
+        // Get image element
+        let slider = document.getElementById("slider");
+
+        // Show image function
+        function showImage() {
+            slider.src = images[index];
+        }
+
+        // Next button
+        document.getElementById("next").addEventListener("click", function() {
+            index++;
+
+            if(index >= images.length) {
+                index = 0; // loop back
+            }
+
+            showImage();
+        });
+
+        // Previous button
+        document.getElementById("prev").addEventListener("click", function() {
+            index--;
+
+            if(index < 0) {
+                index = images.length - 1; // loop to last
+            }
+
+            showImage();
+        });
+
+        // Automatic slideshow
+        setInterval(function() {
+            index++;
+
+            if(index >= images.length) {
+                index = 0;
+            }
+
+            showImage();
+        }, 3000);
+
+    </script>
+
+</body>
+</html>

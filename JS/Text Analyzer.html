@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Analyzer</title>
+    <style>
+        #result {
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 10px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Text Analyzer Tool</h2>
+
+    <textarea id="textInput" rows="6" cols="50" placeholder="Enter your text here..."></textarea><br><br>
+
+    <button id="analyzeBtn">Analyze Text</button>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("analyzeBtn").addEventListener("click", function() {
+
+            let text = document.getElementById("textInput").value.trim(); // remove extra spaces
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ""; // clear previous results
+
+            if(text === "") {
+                resultDiv.innerHTML = "<b>Please enter some text!</b>";
+                return;
+            }
+
+            // Character count
+            let charCount = text.length;
+
+            // Word count (handle multiple spaces)
+            let words = text.split(/\s+/); // splits by 1 or more spaces
+            let wordCount = words.length;
+
+            // Reverse text
+            let reversed = text.split("").reverse().join("");
+
+            // Display results
+            resultDiv.innerHTML = "<b>Total Characters:</b> " + charCount + "<br>" +
+                                  "<b>Total Words:</b> " + wordCount + "<br>" +
+                                  "<b>Reversed Text:</b> " + reversed;
+
+        });
+    </script>
+
+</body>
+</html>

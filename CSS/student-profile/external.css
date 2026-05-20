@@ -1,0 +1,80 @@
+---/* Element Selector */
+
+body {
+
+    font-family: Arial;
+
+    background-color: #f5f5f5;
+
+}
+ 
+/* Header */
+
+header {
+
+    text-align: center;
+
+    background-color: #333;
+
+    color: white;
+
+    padding: 15px;
+
+}
+ 
+/* Profile Box (Class Selector) */
+
+.profile {
+
+    width: 50%;                 /* % unit */
+
+    margin: 30px auto;          /* center align */
+
+    padding: 20px;              /* box model */
+
+    border: 2px solid black;    /* border */
+
+    background-color: #e6f2ff;  /* light background */
+
+    text-align: center;
+
+}
+ 
+/* Image Styling */
+
+.profile img {
+
+    width: 150px;               /* px unit */
+
+    border-radius: 50%;         /* rounded image */
+
+    margin-bottom: 15px;
+
+}
+ 
+/* Bio Text */
+
+.bio {
+
+    font-size: 1.2em;           /* em unit */
+
+    margin-top: 10px;
+
+}
+ 
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    background-color: #333;
+
+    color: white;
+
+}
+ 

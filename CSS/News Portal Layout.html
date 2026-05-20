@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Portal Layout</title>
+
+    <style>
+
+        /* Container */
+        body {
+            font-family: Arial;
+        }
+
+        /* Common Box Style */
+        .box {
+            display: inline-block;   /* side by side */
+            vertical-align: top;     /* align properly */
+            padding: 15px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 20%;
+            background-color: #ffcccc;
+        }
+
+        /* Main Content */
+        .main {
+            width: 55%;
+            background-color: #ccffcc;
+        }
+
+        /* Advertisement */
+        .ads {
+            width: 20%;
+            background-color: #ccccff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="box sidebar">
+        <h3>Categories</h3>
+        <p>World News</p>
+        <p>Sports</p>
+        <p>Technology</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="box main">
+        <h2>Main News</h2>
+        <p>
+            This is the main content area where news articles will be displayed.
+            It contains detailed information and updates about current events.
+        </p>
+    </div>
+
+    <!-- Advertisement -->
+    <div class="box ads">
+        <h3>Advertisements</h3>
+        <p>Buy products here!</p>
+        <p>Special discounts available.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Card</title>
+
+    <style>
+
+        /* Page */
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        /* Card Container */
+        .card {
+            position: relative;        /* parent */
+            width: 250px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 10px;       /* rounded corners */
+            text-align: center;
+        }
+
+        /* Profile Image */
+        .card img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        /* Badge */
+        .badge {
+            position: absolute;        /* child */
+            top: 10px;
+            right: 10px;
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Bio */
+        .bio {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <!-- Badge -->
+        <div class="badge">Online</div>
+
+        <!-- Profile Content -->
+        <img src="profile.png" alt="User Photo">
+
+        <h3>Suraiya Zabin</h3>
+
+        <p class="bio">
+            Web developer who loves creating simple and clean designs.
+        </p>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Light Mode</title>
+
+    <style>
+
+        /* Light Mode (default) */
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        header, footer {
+            padding: 15px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        main {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        /* Dark Mode Class */
+        .dark {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <main>
+        <p>This is my content section.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+    <button id="toggleBtn">Switch to Dark Mode</button>
+
+    <script>
+
+        let isDark = false; // track mode
+
+        let btn = document.getElementById("toggleBtn");
+
+        btn.addEventListener("click", function() {
+
+            if(isDark === false) {
+                document.body.classList.add("dark");
+                btn.innerText = "Switch to Light Mode";
+                isDark = true;
+            } 
+            else {
+                document.body.classList.remove("dark");
+                btn.innerText = "Switch to Dark Mode";
+                isDark = false;
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

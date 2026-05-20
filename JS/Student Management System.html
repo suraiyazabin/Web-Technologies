@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editable Table</title>
+</head>
+
+<body>
+
+    <h2>Student Management System</h2>
+
+    <!-- Input Fields -->
+    Name: <input type="text" id="name"><br><br>
+    Roll: <input type="text" id="roll"><br><br>
+    Department: <input type="text" id="dept"><br><br>
+
+    <button id="addBtn">Add Student</button>
+
+    <p id="error"></p>
+
+    <br>
+
+    <!-- Table -->
+    <table border="1" id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script>
+
+        document.getElementById("addBtn").addEventListener("click", function() {
+
+            let name = document.getElementById("name").value;
+            let roll = document.getElementById("roll").value;
+            let dept = document.getElementById("dept").value;
+
+            let error = document.getElementById("error");
+            error.innerText = "";
+
+            // Validation
+            if(name === "" || roll === "" || dept === "") {
+                error.innerText = "All fields are required!";
+                return;
+            }
+
+            // Create row
+            let tr = document.createElement("tr");
+
+            // Create cells
+            let td1 = document.createElement("td");
+            td1.innerText = name;
+
+            let td2 = document.createElement("td");
+            td2.innerText = roll;
+
+            let td3 = document.createElement("td");
+            td3.innerText = dept;
+
+            let td4 = document.createElement("td");
+
+            // Delete button
+            let delBtn = document.createElement("button");
+            delBtn.innerText = "Delete";
+
+            delBtn.addEventListener("click", function() {
+                tr.remove(); // delete row
+            });
+
+            td4.appendChild(delBtn);
+
+            // Append cells to row
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+
+            // Add row to table
+            document.getElementById("studentTable").appendChild(tr);
+
+            // Clear inputs
+            document.getElementById("name").value = "";
+            document.getElementById("roll").value = "";
+            document.getElementById("dept").value = "";
+
+        });
+
+    </script>
+
+</body>
+</html>

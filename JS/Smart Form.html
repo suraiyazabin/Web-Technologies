@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form Fields</title>
+    <style>
+        #rollField, #deptField {
+            display: none; /* hidden initially */
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0 3px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Smart Registration Form</h2>
+
+    <label for="userType">Select User Type:</label>
+    <select id="userType">
+        <option value="">--Select--</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+    </select>
+
+    <div id="rollField">
+        <label for="roll">Roll Number:</label>
+        <input type="text" id="roll">
+    </div>
+
+    <div id="deptField">
+        <label for="dept">Department:</label>
+        <input type="text" id="dept">
+    </div>
+
+    <script>
+        let userType = document.getElementById("userType");
+        let rollDiv = document.getElementById("rollField");
+        let deptDiv = document.getElementById("deptField");
+
+        userType.addEventListener("change", function() {
+            if(this.value === "student") {
+                rollDiv.style.display = "block";
+                deptDiv.style.display = "none";
+            } else if(this.value === "teacher") {
+                rollDiv.style.display = "none";
+                deptDiv.style.display = "block";
+            } else {
+                rollDiv.style.display = "none";
+                deptDiv.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixed Contact Widget</title>
+
+    <style>
+
+        /* Page Content (for scrolling demo) */
+        body {
+            height: 1500px;
+            font-family: Arial;
+        }
+
+        /* Contact Widget */
+        .contact-box {
+            position: fixed;         /* stays fixed */
+            bottom: 20px;            /* bottom position */
+            right: 20px;             /* right position */
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border: 2px solid black;
+            z-index: 1000;           /* stays above everything */
+            width: 200px;
+        }
+
+        /* Links inside widget */
+        .contact-box a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        /* Hover Effect */
+        .contact-box:hover {
+            background-color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to Our Website</h1>
+    <p>Scroll down to see the fixed contact widget...</p>
+
+    <!-- Contact Widget -->
+    <div class="contact-box">
+        <strong>Contact Us</strong><br><br>
+        Phone: +8801328849041<br>
+        Email: <a href="#">info@example.com</a>
+    </div>
+
+</body>
+</html>

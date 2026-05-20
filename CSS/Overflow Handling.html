@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overflow Handling</title>
+
+    <style>
+
+        /* Common Box Style */
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        /* Overflow: visible (default)
+           Content spills outside the box */
+        .visible {
+            overflow: visible;
+        }
+
+        /* Overflow: hidden
+           Extra content is cut off */
+        .hidden {
+            overflow: hidden;
+        }
+
+        /* Overflow: scroll
+           Scrollbars always appear */
+        .scroll {
+            overflow: scroll;
+        }
+
+        /* Overflow: auto
+           Scrollbars appear only when needed */
+        .auto {
+            overflow: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Overflow: visible</h2>
+    <div class="box visible">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+       
+        
+    </div>
+
+    <h2>Overflow: hidden</h2>
+    <div class="box hidden">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+
+    <h2>Overflow: scroll</h2>
+    <div class="box scroll">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Scrollbars will always appear even if not needed.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+
+    <h2>Overflow: auto</h2>
+    <div class="box auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Scrollbars will appear only when content exceeds the box size.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        This text will overflow outside the box because overflow is visible.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Extra content will be hidden and not visible outside the box.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+
+</body>
+</html>
