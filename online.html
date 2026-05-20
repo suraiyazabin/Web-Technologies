@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width", initial-scale=1">
+		<title>My Form</title>
+	</head>
+	<body>
+		<h1>Test Form</h1>
+		<form id="myForm" action="" method="get">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username">
+			<span style="color: red" id="usernameErrMsg"></span>
+			<br><br>
+			<label for="password">Password:</label>
+			<input type="text" name="password" id="password">
+			<span style="color: red" id="passwordErrMsg"></span>
+			<br><br>
+			<input type="submit">
+			<p id="LiveOutput"></p>
+		</form>
+
+		<script>
+			document.getElementById("username").addEventListener("input", showLive);
+			function showLive(){
+				const username = document.getElementById("username").value;
+				const password = document.getElementById("password").value;
+				document.getElementById("LiveOutput").innerHTML = username.toUpperCase() + " " + password.toUpperCase();
+			}
+			document.getElementById("myForm").addEventListener('submit', function(event){
+				event.preventDefault();
+				let flag = true;
+
+				if(event.target.username.value === ""){
+					document.getElementById("usernameErrMsg").innerHTML = "Username Error";
+					flag =  false;
+				}else{
+					document.getElementById("usernameErrMsg").innerHTML = "";
+				}
+				if(event.target.password.value === ""){
+					document.getElementById("passwordErrMsg").innerHTML = "Password Error";
+					flag =  false;
+				}else{
+					document.getElementById("passwordErrMsg").innerHTML = "";
+				}
+				if(flag === true){
+					event.target.submit();
+				}
+			});
+		</script>
+	</body>
+</html>

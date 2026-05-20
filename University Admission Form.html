@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>University Admission Form</title>
+ 
+    <!-- Meta Tags -->
+<meta charset="UTF-8">
+<meta name="author" content="Your Name">
+<meta name="description" content="University Admission Form">
+<meta name="keywords" content="admission, university, form">
+ 
+</head>
+ 
+<body>
+ 
+    <header>
+<h1>University Admission Form</h1>
+</header>
+ 
+    <main>
+ 
+        <form>
+ 
+            <!-- Personal Information -->
+<fieldset>
+<legend>Personal Information</legend>
+ 
+                Full Name:<br>
+<input type="text" name="fullname" maxlength="50" required><br><br>
+ 
+                Email:<br>
+<input type="email" name="email" required><br><br>
+ 
+                Date of Birth:<br>
+<input type="date" name="dob" required><br><br>
+ 
+                Gender:<br>
+<input type="radio" name="gender" value="male" required> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="other"> Other
+<br><br>
+ 
+            </fieldset>
+ 
+            <!-- Academic Information -->
+<fieldset>
+<legend>Academic Information</legend>
+ 
+                Previous School/College:<br>
+<input type="text" name="institution" required><br><br>
+ 
+                GPA/Marks:<br>
+<input type="number" name="gpa" required><br><br>
+ 
+                Preferred Department:<br>
+<select name="department" required>
+<option value="">--Select--</option>
+<option value="cse">CSE</option>
+<option value="eee">EEE</option>
+<option value="bba">BBA</option>
+</select>
+<br><br>
+ 
+                Interests:<br>
+<input type="checkbox" name="interest" value="sports"> Sports
+<input type="checkbox" name="interest" value="music"> Music
+<input type="checkbox" name="interest" value="coding"> Coding
+<br><br>
+ 
+            </fieldset>
+ 
+            <!-- Documents Upload -->
+<fieldset>
+<legend>Upload Documents</legend>
+ 
+                Upload Transcript:<br>
+<input type="file" name="transcript" required><br><br>
+ 
+                Upload Photo:<br>
+<input type="file" name="photo" required><br><br>
+ 
+            </fieldset>
+ 
+            <!-- Buttons -->
+<br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+ 
+        </form>
+ 
+    </main>
+ 
+    <footer>
+<p>© 2026 University Admission</p>
+</footer>
+ 
+</body>
+</html>
+ 
